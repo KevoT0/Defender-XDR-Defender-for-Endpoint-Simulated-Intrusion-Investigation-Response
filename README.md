@@ -44,7 +44,7 @@ Total Azure spend for the entire project: **~£1.37** — the VM only billed whi
  
 Onboarded the VM to Defender for Endpoint via the local script:
  
-1. **Defender portal → System → Settings → Endpoints → Device management → Onboarding.** Selected Windows 10/11, **Standard** connectivity, **Local Script**. `[01]`
+1. **Defender portal → System → Settings → Endpoints → Device management → Onboarding.** Selected Windows 10/11, **Standard** connectivity, **Local Script**. https://github.com/KevoT0/Defender-XDR-Defender-for-Endpoint-Simulated-Intrusion-Investigation-Response/blob/main/1.png
 2. Ran `WindowsDefenderATPLocalOnboardingScript.cmd` **elevated** on the VM — the script writes the tenant workspace ID into `HKLM` and starts the **Sense** service (the EDR sensor). Confirmation: *"Successfully onboarded machine to Microsoft Defender for Endpoint."* `[02]`
 3. Verified the sensor was live locally: `sc query sense` → `STATE: 4 RUNNING`. `[03]`
 4. Ran the detection test, then confirmed the device appeared in **Assets → Devices** as **Active / Onboarded**. `[05]`
